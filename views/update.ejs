@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Update Data</h1>
+
+    <form action="/updatedata/<%= result._id %>" method="POST">               
+            <input type="text" placeholder="username.." name="name" value="<%= result.name%>"><br><br>
+            <input type="number" placeholder="age" name="age" value="<%= result.age%>"><br><br>
+            <input type="text" placeholder="address" name="address" value="<%= result.address%>"><br><br>
+            <input type="number" placeholder="number" name="number" value="<%= result.number%>"><br><br>
+            <button>update</button>
+    </form>
+    
+</body>
+
+</html>

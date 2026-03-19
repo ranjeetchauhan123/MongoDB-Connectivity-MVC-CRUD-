@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Get deta from MongoDB</h1>
+
+    <div>
+
+        <table border="1">
+            <tr>
+                <th>Name </th>
+                <th>age </th>
+                <th>Address </th>
+                <th>Number</th>
+            </tr>
+            <% if(students){%>
+            <% students.map((user)=>{ %>
+            <tr>                
+                <td><%= user.name %> </td>
+                <td><%= user.age %> </td>
+                <td><%= user.address %> </td>
+                <td><%= user.number %> </td>
+            <% })%>
+
+        <% } else {%>
+            <p>No Such Data !
+        <% }%>
+            </tr>
+        </table>
+        
+    </div>
+    
+    
+    
+</body>
+</html>

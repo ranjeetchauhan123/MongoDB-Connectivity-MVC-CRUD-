@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MongoDM</title>
+</head>
+<body>
+    <h1>GET , POST , DELETE , UPDATE (CRUD OPERATION) </h1>
+
+<fieldset>
+    <table border="1">
+        <h2>Students List (Get Data)</h2>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Address</th>
+            <th>Number</th>
+            <th>user ID</th>
+            <th>Delete User</th>
+            <th>Update User</th>
+        </tr>
+        <% student.map((user)=>{%>
+        <tr>       
+            <td><%= user.name%></td>
+            <td><%= user.age%></td>
+            <td><%= user.address%></td>
+            <td><%= user.number%></td>
+            <td><%= user._id%></td>
+            <td><a href='/user/<%= user._id %>'><button>delete</button></a></th>
+            <td><a href='/update/<%= user._id %>'><button>Update</button></a></th>
+        <%})%>
+        </tr>
+    </table>
+</fieldset> <br><br>
+
+<h1>Post Data</h1>
+
+<form action="/submit" method="POST">
+    <input type="text"placeholder="name" name="name"> <br><br>
+    <input type="number"placeholder="age" name="age"> <br><br>
+    <input type="text"placeholder="address" name="address"> <br><br>
+    <input type="number"placeholder="number" name="number"> <br><br>
+    <button>submit</button>
+</form>
+
+
+</body>
+</html>

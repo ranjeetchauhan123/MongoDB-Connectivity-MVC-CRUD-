@@ -116,8 +116,12 @@
 
 const express = require('express')
 const controller = require('./consroller/handleController')
+const connectDB = require('./model/handleModel')
 const app = express()
 const port = 3000
+
+
+connectDB()
 
 app.set('view engine','ejs')
 app.use(express.urlencoded({extended: true}))
